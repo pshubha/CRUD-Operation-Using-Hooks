@@ -7,7 +7,7 @@ import CrudHook from './CrudHook';
 function CrudMain() {
     return (
         <CrudContextProvider>
-            <CrudHook/>
+            <CrudHook />
         </CrudContextProvider>
     )
 }
