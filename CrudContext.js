@@ -6,7 +6,7 @@ export const CrudContext = React.createContext();
 const CrudContextProvider = (props) => {
     const initialState = JSON.parse(localStorage.getItem('ItemList')) || []
     const [data, setData] = useState(initialState);
-    console.log(data);
+
     useEffect(() => {
         localStorage.setItem('ItemList', JSON.stringify(data))
     }, [data])
