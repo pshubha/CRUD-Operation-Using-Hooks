@@ -14,8 +14,8 @@ const CrudContextProvider=(props)=> {
     const [editItem, setEditItem] = useState(null);
 
     const findData = (id)=>{
-        const it =  data.find(d => d.id === id)
-        setEditItem(it)
+        const newItem =  data.find(d => d.id === id)
+        setEditItem(newItem)
     }
 
     const editData=(item,id)=>{
@@ -25,7 +25,7 @@ const CrudContextProvider=(props)=> {
     }
 
     const addData=(item)=>{
-        setData([...data, {id:uuid(),Item:item}])
+        setData([...data, {id:uuid(),item}])
     }
 
     const removeData=(id)=>{
