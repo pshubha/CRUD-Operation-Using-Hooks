@@ -5,7 +5,7 @@ const CrudHook=()=> {
     const {data, addData, findData, editData, editItem, removeData, clearData} = useContext(CrudContext)
     const [item, setItem] = useState('')
     
-    // const [deleteData, onDelete] = useDelete()
+  
     console.log("dattaaaa"+data)
     useEffect(()=>{
         if(editItem){
@@ -53,7 +53,7 @@ const CrudHook=()=> {
                             return (
                                 <tr key={n.id}>
                                     <td>{i + 1}</td>
-                                    <td>{n.Item}</td>
+                                    <td>{n.item}</td>
                                     <td><button className='btn btn-dark' onClick={()=>findData(n.id)}>Update</button>
                                         <button className='btn btn-info' onClick={()=>removeData(n.id)}>&times;</button></td>
                                 </tr>
